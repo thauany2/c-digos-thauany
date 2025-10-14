@@ -33,13 +33,14 @@ elif opcao == "madrinha" :
 
 if st.button("calcular"):
     hora = int(horario)
-    dia = float(dia)
+    dia = int(dia)
 
     total_hora = hora * horario
     total_dia = dia * 0.15 
     aluguel_total  = total_hora+total_dia
 
     st.warning(f"você fez o penteado {opcao} por {hora} dia que fez{dia}dia . O valor total a pagar é R$ {aluguel_total :.2f}")
+    
     
 
 
