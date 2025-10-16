@@ -3,7 +3,7 @@ import streamlit as st
 st.sidebar.image("logo.png")
 
 # Dados de exemplo
-generos_de_musica = ["Romance", "funk", "internacional"]
+generos_de_musica = ["Romance", "Funk", "Internacional"]
 
 # Dicionário relacionando gêneros aos seus livro_por_genero  
 
@@ -37,16 +37,16 @@ if genero_selecionado and artista_selecionado:
     elif genero_selecionado == 'Romance' and artista_selecionado == "Thinking out Loud":
         st.video("https://www.youtube.com/watch?v=lp-EO5I60KA")
     
-    if genero_selecionado == 'funk' and artista_selecionado == "Sequência feiticeira":
+    if genero_selecionado == 'Funk' and artista_selecionado == "Sequência feiticeira":
         st.video("https://www.youtube.com/watch?v=_zKnEm9xPWw")
-    elif genero_selecionado == 'funk' and artista_selecionado == "Construção de amor":
+    elif genero_selecionado == 'Funk' and artista_selecionado == "Construção de amor":
         st.video("https://www.youtube.com/watch?v=nuwD3tHRygo")
-    elif genero_selecionado == 'funk' and artista_selecionado == "Ela é profissional":
+    elif genero_selecionado == 'Funk' and artista_selecionado == "Ela é profissional":
         st.video("https://www.youtube.com/watch?v=T_WGwPOZREA")
     
-    if genero_selecionado == 'internacional' and artista_selecionado == "Feel it":
+    if genero_selecionado == 'Internacional' and artista_selecionado == "Feel it":
         st.video("https://www.youtube.com/watch?v=vZi8ET9k11g")
-    elif genero_selecionado == 'internacional' and artista_selecionado == "Like a boy":
+    elif genero_selecionado == 'Internacional' and artista_selecionado == "Like a boy":
         st.video("https://www.youtube.com/watch?v=_HKH7Emy1SY")
-    elif genero_selecionado == 'internacional' and artista_selecionado == "Ride or die,pt.2":
+    elif genero_selecionado == 'Internacional' and artista_selecionado == "Ride or die,pt.2":
         st.video("https://www.youtube.com/watch?v=z7KKPtF6vtM")
