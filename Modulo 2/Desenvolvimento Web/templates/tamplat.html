@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Lista de Robôs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #0077b6;
+            color: white;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        main {
+            margin-top: 2rem;
+            width: 90%;
+            max-width: 600px;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            background: #e0f7fa;
+            margin: 8px 0;
+            padding: 10px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        button {
+            background-color: #0077b6;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005f87;
+        }
+
+        .input-section {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        input {
+            flex: 1;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        🤖 Minha Lista de Robôs
+    </header>
+
+    <main>
+        <h2>Adicione seus robôs favoritos</h2>
+
+        <div class="input-section">
+            <input type="text" id="robotName" placeholder="Nome do robô...">
+            <button onclick="addRobot()">Adicionar</button>
+        </div>
+
+        <ul id="robotList">
+            <!-- Os robôs aparecerão aqui -->
+        </ul>
+    </main>
+
+    <script>
+        function addRobot() {
+            const input = document.getElementById('robotName');
+            const name = input.value.trim();
+            if (name === '') return;
+
+            const li = document.createElement('li');
+            li.textContent = name;
+
+            const removeBtn = document.createElement('button');
+            removeBtn.textContent = 'Remover';
+            removeBtn.onclick = () => li.remove();
+
+            li.appendChild(removeBtn);
+            document.getElementById('robotList').appendChild(li);
+
+            input.value = '';
+        }
+    </script>
+</body>
+</html>
